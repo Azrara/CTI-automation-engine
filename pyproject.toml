@@ -1,0 +1,19 @@
+[project]
+name = "cti-triage"
+version = "0.1.0"
+description = "Moteur de triage CTI : Flare.io -> normalisation -> triage -> JIRA"
+requires-python = ">=3.11"
+dependencies = []   # bibliothèque standard uniquement
+
+[project.optional-dependencies]
+ml = ["scikit-learn>=1.4", "xgboost>=2.0"]   # pour la v2 du modèle appris
+
+[project.scripts]
+cti-triage = "cti_triage.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["cti_triage*"]

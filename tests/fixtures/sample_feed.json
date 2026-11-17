@@ -1,0 +1,59 @@
+{
+  "_comment": "Données SYNTHÉTIQUES (domaines example.*) au format du flux /firework/v4/events/tenant/_search. Aucune donnée réelle.",
+  "items": [
+    {
+      "metadata": {"uid": "evt-001", "type": "stealer_log", "severity": "high",
+                   "estimated_created_at": "2026-11-15T10:00:00Z", "matched_at": "2026-11-15T12:00:00Z"},
+      "tenant_metadata": {"severity": {"original": "high", "override": null}, "tags": [], "notes": null},
+      "identifiers": [{"id": 1, "name": "example.com"}],
+      "highlights": {"title": "Stealer log contenant vpn.example.com", "description": "Bot infecté avec identifiants pour jdoe@example.com"},
+      "_detail": {"header": {"risk": {"score": 85}}, "data": {"cookies": [{"domain": "vpn.example.com"}], "password": "***"}}
+    },
+    {
+      "metadata": {"uid": "evt-002", "type": "valid_credential", "severity": "critical",
+                   "estimated_created_at": "2026-11-16T08:00:00Z", "matched_at": "2026-11-16T09:00:00Z"},
+      "identifiers": [{"id": 1, "name": "example.com"}],
+      "highlights": {"title": "Identifiant valide pour admin@example.com", "description": "Combo email:password vérifié"},
+      "_detail": {"data": {"password": "***"}}
+    },
+    {
+      "metadata": {"uid": "evt-003", "type": "google", "severity": "info",
+                   "estimated_created_at": "2025-01-10T08:00:00Z", "matched_at": "2026-11-16T09:30:00Z"},
+      "identifiers": [{"id": 1, "name": "example.com"}],
+      "highlights": {"title": "Mention de example.com dans un résultat de recherche", "description": "Page publique citant la marque"}
+    },
+    {
+      "metadata": {"uid": "evt-004", "type": "paste", "severity": "low",
+                   "estimated_created_at": "2026-11-10T08:00:00Z", "matched_at": "2026-11-16T10:00:00Z"},
+      "identifiers": [{"id": 1, "name": "example.com"}],
+      "highlights": {"title": "Paste mentionnant example.com", "description": "Liste de domaines sans données sensibles"}
+    },
+    {
+      "metadata": {"uid": "evt-005", "type": "valid_credential", "severity": "critical",
+                   "estimated_created_at": "2026-11-16T08:00:00Z", "matched_at": "2026-11-16T11:00:00Z"},
+      "identifiers": [{"id": 1, "name": "example.com"}],
+      "highlights": {"title": "Identifiant valide pour admin@example.com", "description": "Combo email:password vérifié"},
+      "_detail": {"data": {"password": "***"}}
+    },
+    {
+      "metadata": {"uid": "evt-006", "type": "lookalike_dns", "severity": "medium",
+                   "estimated_created_at": "2026-11-16T07:00:00Z", "matched_at": "2026-11-16T07:30:00Z"},
+      "identifiers": [{"id": 1, "name": "example.com"}],
+      "highlights": {"title": "Domaine lookalike examp1e-login.com", "description": "Enregistrement MX actif, certificat TLS récent"}
+    },
+    {
+      "metadata": {"uid": "evt-007", "type": "invalid_credential", "severity": "medium",
+                   "estimated_created_at": "2026-10-01T08:00:00Z", "matched_at": "2026-11-16T12:00:00Z"},
+      "identifiers": [{"id": 1, "name": "example.com"}],
+      "highlights": {"title": "Ancien identifiant pour user@example.com", "description": "Mot de passe déjà changé"},
+      "_detail": {"header": {"remediated_at": "2026-10-05T00:00:00Z"}}
+    },
+    {
+      "metadata": {"uid": "evt-008", "type": "ransomleak", "severity": "critical",
+                   "estimated_created_at": "2026-11-16T13:00:00Z", "matched_at": "2026-11-16T13:10:00Z"},
+      "identifiers": [{"id": 2, "name": "Example Corp"}],
+      "highlights": {"title": "Example Corp listé sur un blog de ransomware", "description": "Le groupe annonce 200 Go de données"},
+      "_detail": {"data": {"group": "examplelocker", "nb_records": 200000}}
+    }
+  ]
+}
